@@ -63,3 +63,7 @@
 
 (after! cider
   (set-popup-rule! "^\\*cider-repl" :side 'right :width 0.5))
+
+(map! "C-c C-w" 'sp-wrap-round)
+(map! "C-c C-a" 'sp-forward-barf-sexp)
+(map! "C-c C-y" 'sp-forward-slurp-sexp)
