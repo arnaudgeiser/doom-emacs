@@ -50,4 +50,9 @@
 ;(unpin! t)
 
 (package! treemacs)
-(package! eshell)
+(package! flymake-shellcheck)
+(package! groovy-mode)
+(package! elpy)
+(package! lsp-python-ms)
+(package! jedi)
+(package! nord-theme)

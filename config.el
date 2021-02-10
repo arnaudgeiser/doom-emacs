@@ -25,7 +25,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-nord)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -61,9 +61,12 @@
 (setq cider-auto-jump-to-error nil)
 (setq cider-auto-select-error-buffer nil)
 
-(after! cider
-  (set-popup-rule! "^\\*cider-repl" :side 'right :width 0.5))
-
 (map! "C-c C-w" 'sp-wrap-round)
 (map! "C-c C-a" 'sp-forward-barf-sexp)
 (map! "C-c C-y" 'sp-forward-slurp-sexp)
+
+(setenv "GOPATH" "/home/arnaudgeiser/go")
+(setenv "PATH" (concat (getenv "PATH") ":/home/arnaudgeiser/go/bin:/usr/local/go/bin"))
+
+(setq lsp-gopls-codelens nil)
+(global-display-line-numbers-mode)
